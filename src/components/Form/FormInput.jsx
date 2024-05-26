@@ -7,6 +7,7 @@ export default function FormInput() {
 
     function handelSubmit(e) {
         e.preventdefault();
+        
     }
 
   return (

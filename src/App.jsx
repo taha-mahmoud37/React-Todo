@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <FormInput onlist = {setlists}/>
-      <Lists numOfList = {numOfList} />
+      <Lists numOfList = {numOfList} lists={lists}/>
     </>
   );
 }

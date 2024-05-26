@@ -1,7 +1,7 @@
 
 .form {
     width: 100%;
-    height: 200px;
+    height: 135px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 .form label {
     color: #fff;
-    visibility: hidden;
+    display: none;
 }
 
 .form input[type ="text"] {
