@@ -1,0 +1,11 @@
+
+
+.btn {
+    background-color: #9E78CF;
+    color: #fff;
+    padding: 10px 30px;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-family: "Rubik", sans-serif;
+    border-radius: 10px;
+}
