@@ -9,6 +9,7 @@ main {
 
 .container {
     width: 35%;
+    margin-bottom: 35px;
 }
 
 .container h2 {

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+import DoneList from "../DoneList/DoneList";
 import ListItem from "../ListItem/ListItem";
 import styles from './Lists.module.css';
 
@@ -13,6 +14,10 @@ export default function Lists({ lists, numOfList }) {
           
           <ListItem />
         </ul>
+      </section>
+      <section className={styles.container}>
+        <h2>Done - {0} </h2>
+        <DoneList />
       </section>
     </main>
   );
