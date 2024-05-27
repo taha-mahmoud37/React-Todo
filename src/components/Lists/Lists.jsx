@@ -9,7 +9,8 @@ export default function Lists({ lists, numOfList, setlists }) {
   function handleDeleteItem(id) {
     console.log(id);
     const filteredList =  lists.filter((item)=> item.id != id);
-    setlists(filteredList)
+    setlists(filteredList);
+    localStorage.setItem("dataList", JSON.stringify(filteredList));
   }
  console.log(lists)
   return (
