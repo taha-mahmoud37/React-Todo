@@ -1,14 +1,20 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import Button from "../Buttons/Button";
 import styles from "./Form.module.css";
 
-export default function FormInput() {
-    const [inputtext, setInputText] = useState('');
+export default function FormInput({ onlist }) {
+  const [inputtext, setInputText] = useState("");
 
-    function handelSubmit(e) {
-        e.preventdefault();
-        
-    }
+  function handelSubmit(e) {
+    e.preventDefault();
+    if (inputtext.length < 3) return;
+    onlist((item) => [
+      ...item,
+      { title: inputtext, id: Math.floor(Math.random() * 100) },
+    ]);
+    setInputText("");
+  }
 
   return (
     <form className={styles.form} onSubmit={handelSubmit}>

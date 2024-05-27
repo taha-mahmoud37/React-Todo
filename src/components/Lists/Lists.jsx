@@ -4,21 +4,26 @@ import DoneList from "../DoneList/DoneList";
 import ListItem from "../ListItem/ListItem";
 import styles from './Lists.module.css';
 
-export default function Lists({ lists, numOfList }) {
-  if (lists < 0) return;
+export default function Lists({ lists, numOfList, setlists }) {
+
+  function handleDeleteItem(id) {
+    console.log(id);
+    const filteredList =  lists.filter((item)=> item.id != id);
+    setlists(filteredList)
+  }
+ console.log(lists)
   return (
     <main>
-      <section className={styles.container}>
+     {lists.length > 0 ?  <><section className={styles.container}>
         <h2>task to do - {numOfList} </h2>
         <ul>
-          
-          <ListItem />
+          {lists.map((item) => <ListItem item = {item} key={item.id} onDelete = {handleDeleteItem} />)}
         </ul>
-      </section>
+      </section></> : ''}
       <section className={styles.container}>
-        <h2>Done - {0} </h2>
-        <DoneList />
-      </section>
+          <h2>Done - {0} </h2>
+          <DoneList />
+        </section>
     </main>
   );
 }
