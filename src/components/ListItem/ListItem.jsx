@@ -2,15 +2,15 @@
 import styles from './Listitem.module.css';
 import { FaCheck } from "react-icons/fa6";
 import { MdDeleteOutline } from "react-icons/md";
-export default function ListItem({item, onDelete}) {
+export default function ListItem({item, onDeleteitem, onDone}) {
 
   
   return (
     <li className={styles.item}>
       <p>{item.title}</p> 
       <div>
-        <FaCheck role='button' aria-label='Check' className={styles.btn} />
-        <MdDeleteOutline onClick={() => onDelete(item.id)} role='button' aria-label='Delete' className={styles.btn}/>
+        <FaCheck onClick={() => onDone(item)} role='button' aria-label='Check' className={styles.btn} />
+        <MdDeleteOutline onClick={() => onDeleteitem(item.id)} role='button' aria-label='Delete' className={styles.btn}/>
       </div>
     </li>
   )
