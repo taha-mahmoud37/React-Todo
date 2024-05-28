@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "../Buttons/Button";
 import styles from "./Form.module.css";
 
-export default function FormInput({ onlist, onSave }) {
+export default function FormInput({ onlist }) {
   const [inputtext, setInputText] = useState("");
 
   function handelSubmit(e) {
@@ -13,7 +13,6 @@ export default function FormInput({ onlist, onSave }) {
       ...item,
       { title: inputtext, id: Math.floor(Math.random() * 100) },
     ]);
-    onSave();
     setInputText("");
   }
 

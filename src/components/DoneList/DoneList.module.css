@@ -12,6 +12,7 @@
     text-transform: capitalize;
     text-decoration: line-through;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .item p {
@@ -22,7 +23,7 @@
 
 .btn {
     background-color: transparent;
-    color: #9E78CF;
+    color: #78CFB0;
     font-size: 1.5rem;
     margin: 0px 10px;
     cursor: pointer;
